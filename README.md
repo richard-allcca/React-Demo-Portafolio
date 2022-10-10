@@ -1,6 +1,6 @@
 # Portafolio Abril 22 echo con react
 
-- [ver Pagina](https://richard-allcca.github.io/Portafolio-react/)
+- [ver Pagina](https://bright-peony-dc37e6.netlify.app/)
 
 <!-- <img src="./src/assets/potafolio-react.png" > -->
 -![Vista Previa](./src/assets/potafolio-react.png)
