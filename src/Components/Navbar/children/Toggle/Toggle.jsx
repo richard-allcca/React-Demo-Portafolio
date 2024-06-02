@@ -1,13 +1,12 @@
 // icons
 import Moon from "@iconscout/react-unicons/icons/uil-moon";
 import Sun from "@iconscout/react-unicons/icons/uil-sun";
-import React, { useContext } from "react";
-// context
-import { themeContext } from "../../Context";
-// style
+import { useContext } from "react";
+import { themeContext } from "../../../../Context";
+
 import "./Toggle.css";
 
-const Toogle = () => {
+const Toggle = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
 
@@ -27,4 +26,4 @@ const Toogle = () => {
   );
 };
 
-export default Toogle;
+export default Toggle;

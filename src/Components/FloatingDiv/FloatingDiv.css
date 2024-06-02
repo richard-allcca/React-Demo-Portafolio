@@ -1,4 +1,4 @@
-.floatingdiv {
+.floating-div {
   justify-content: space-around;
   display: flex;
   background: white;
@@ -9,11 +9,11 @@
   height: 4.5rem;
 }
 
-.floatingdiv > img {
+.floating-div>img {
   transform: scale(0.4);
 }
 
-.floatingdiv > span {
+.floating-div>span {
   font-family: sans-serif;
   font-size: 16px;
   color: black;

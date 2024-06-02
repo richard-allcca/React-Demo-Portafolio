@@ -1,21 +1,20 @@
-// animation
-// context
 import { motion } from "framer-motion";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { themeContext } from "../../Context";
 // iconos
 import Amazon from "../../img/amazon.png";
 import Facebook from "../../img/Facebook.png";
-import Fiverr from "../../img/fiverr.png";
+import Fiver from "../../img/fiver.png";
 import Shopify from "../../img/Shopify.png";
 // Iconos
-import Upwork from "../../img/Upwork.png";
+import UpWork from "../../img/UpWork.png";
 import "./Works.css";
 
 const Works = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
-  return (
+  
+return (
     <div className="works">
       <div className="awesome">
         <span style={{ color: darkMode ? "white" : "" }}>
@@ -35,7 +34,7 @@ const Works = () => {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </span>
         <button className="button s-button">Hire me</button>
-        <div className="blur s-blur1" styles={{ background: "ABF1FF94" }}></div>
+        <div className="blur s-blur1" style={{ background: "ABF1FF94" }}></div>
       </div>
       {/* right side */}
       <div className="w-right">
@@ -47,10 +46,10 @@ const Works = () => {
           transition={{ duration: 3.5, type: "spring" }}
         >
           <div className="w-secCircle">
-            <img src={Upwork} alt="" />
+            <img src={UpWork} alt="" />
           </div>
           <div className="w-secCircle">
-            <img src={Fiverr} alt="" />
+            <img src={Fiver} alt="" />
           </div>
           <div className="w-secCircle">
             <img src={Amazon} alt="" />

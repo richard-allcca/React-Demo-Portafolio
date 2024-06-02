@@ -1,15 +1,13 @@
-import React from "react";
-// scroll
 import { Link } from 'react-scroll';
-import Toogle from "../Toogle/Toogle";
 import "./Navbar.css";
 
+import Toggle from './children/Toggle/Toggle';
 const Navbar = () => {
   return (
     <div className="n-wrapper">
       <div className="n-left">
         <div className="n-name">Thouma</div>
-        <Toogle />
+        <Toggle />
       </div>
       <div className="n-right">
         <div className="n-list">

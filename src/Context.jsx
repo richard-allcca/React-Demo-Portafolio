@@ -4,7 +4,6 @@ export const themeContext = createContext();
 
 const initialState = { darkMode: false };
 
-
 const themeReducer = (state, action) => {
 
    switch (action.type) {
@@ -16,9 +15,11 @@ const themeReducer = (state, action) => {
    }
 };
 
+// eslint-disable-next-line react/prop-types
 export const ThemeProvider = ({ children }) => {
    const [ state, dispatch ] = useReducer(themeReducer, initialState);
-   return (
+
+return (
       <themeContext.Provider value={{ state, dispatch }}>
          {children}
       </themeContext.Provider>
@@ -26,4 +27,4 @@ export const ThemeProvider = ({ children }) => {
 };
 
 // Notas:
-// 1. Aqui usamos "Context" y "Reducer" para usar el reducer dentro de todo el contexto creado
+// 1. Aquí usamos "Context" y "Reducer" para usar el reducer dentro de todo el contexto creado

@@ -2,7 +2,6 @@
 import Facebook from "@iconscout/react-unicons/icons/uil-facebook";
 import Github from "@iconscout/react-unicons/icons/uil-github";
 import Insta from "@iconscout/react-unicons/icons/uil-instagram";
-import React from "react";
 // images
 import wave from "../../img/wave.png";
 // styles

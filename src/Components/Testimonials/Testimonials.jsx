@@ -1,4 +1,3 @@
-import React from "react";
 // slider library
 import { Pagination } from "swiper";
 import "swiper/css";
@@ -16,21 +15,25 @@ const Testimonials = () => {
     {
       img: profilePic1,
       review:
+        // eslint-disable-next-line max-len
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum doloribus fugiat fugit cum corporis esse sed exercitationem dolorum dolore quisquam quasi voluptas officia praesentium iste iure voluptatibus, ipsa magni tempora obcaecati eum magnam eaque sapiente! Dolores eum est neque.",
-    },
-    {
-      img: profilePic2,
-      review:
+      },
+      {
+        img: profilePic2,
+        review:
+        // eslint-disable-next-line max-len
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum doloribus fugiat fugit cum corporis esse sed exercitationem dolorum dolore quisquam quasi voluptas officia praesentium iste iure voluptatibus, ipsa magni tempora obcaecati eum magnam eaque sapiente! Dolores eum est neque.",
-    },
-    {
-      img: profilePic3,
-      review:
+      },
+      {
+        img: profilePic3,
+        review:
+        // eslint-disable-next-line max-len
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum doloribus fugiat fugit cum corporis esse sed exercitationem dolorum dolore quisquam quasi voluptas officia praesentium iste iure voluptatibus, ipsa magni tempora obcaecati eum magnam eaque sapiente! Dolores eum est neque.",
-    },
-    {
-      img: profilePic4,
-      review:
+      },
+      {
+        img: profilePic4,
+        review:
+        // eslint-disable-next-line max-len
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum doloribus fugiat fugit cum corporis esse sed exercitationem dolorum dolore quisquam quasi voluptas officia praesentium iste iure voluptatibus, ipsa magni tempora obcaecati eum magnam eaque sapiente! Dolores eum est neque.",
     },
   ];

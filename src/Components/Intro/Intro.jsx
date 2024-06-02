@@ -1,20 +1,20 @@
 // animation
 import { motion } from "framer-motion";
 // context
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-scroll/modules";
 import { themeContext } from "../../Context";
 // components
 import boy from "../../img/boy.png";
 import Crown from "../../img/crown.png";
 import Github from "../../img/github.png";
-import glassesimoji from "../../img/glassesimoji.png";
+import glassesEmoji from "../../img/glassesEmoji.png";
 import Instagram from "../../img/instagram.png";
-import LinkedIn from "../../img/linkedin.png";
-import thumbup from "../../img/thumbup.png";
+import LinkedIn from "../../img/linkedIn.png";
+import thumbUp from "../../img/thumbUp.png";
 import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
-import FloatingDiv from "../FloatingDiv/FloatingDiv";
+import FloatingDiv from './../FloatingDiv/FloatingDiv';
 // styles
 import "./Intro.css";
 
@@ -78,11 +78,10 @@ const Intro = () => {
         <img src={boy} alt="" />
         {/* imagenes */}
         <motion.img
-          // className="floating-div"
           initial={{ left: "-36%" }}
           whileInView={{ left: "-24%" }}
           transition={{ transition }}
-          src={glassesimoji}
+          src={glassesEmoji}
           alt="Emoji con lentes"
         />
         <motion.div
@@ -101,9 +100,8 @@ const Intro = () => {
           transition={transition}
           style={{ top: "18rem", left: "0rem" }}
         >
-          <FloatingDiv image={thumbup} txt1="Best Desing" txt2="Award" />
+          <FloatingDiv image={thumbUp} txt1="Best Design" txt2="Award" />
         </motion.div>
-        {/* blur divs */}
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
         <div
           className="blur"

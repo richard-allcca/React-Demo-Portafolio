@@ -1,5 +1,5 @@
 import emailjs from "@emailjs/browser";
-import React, { useContext, useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { themeContext } from "../../Context";
 import "./Contact.css";
 
@@ -70,11 +70,11 @@ const Contact = () => {
             rows="10"
           ></textarea>
           <input type="submit" value="Save" className="button" />
-          {done && "Thanks for contactin me"}
+          {done && "Thanks for contacting me"}
           <div
             className="blur c-blur1"
-            style={{ background: "var(--puple)" }}
-          ></div>
+            style={{ background: "var(--purple)" }}
+          >Hola</div>
         </form>
       </div>
     </div>

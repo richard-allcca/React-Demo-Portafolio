@@ -1,4 +1,3 @@
-import React from "react";
 import "./Experience.css";
 
 const Experience = () => {
@@ -13,7 +12,7 @@ const Experience = () => {
       <div className="achievement">
         <div className="circle">5+</div>
         <span>completed</span>
-        <span>Proyects</span>
+        <span>Projects</span>
       </div>
 
       <div className="achievement">

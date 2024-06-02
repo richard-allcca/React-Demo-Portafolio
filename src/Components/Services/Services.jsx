@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useContext } from "react";
+import { useContext } from "react";
 // cv pdf
 import Resume from "../../assets/CV-05-2022-RICHARD.pdf";
 import { themeContext } from "../../Context";
@@ -15,7 +15,8 @@ const Services = () => {
 
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
-  return (
+
+return (
     <div className="services" id="Services">
       {/* left side */}
       <div className="awesome">
@@ -31,7 +32,7 @@ const Services = () => {
         <a href={Resume}>
           <button className="button s-button">Download CV</button>
         </a>
-        <div className="blur s-blur1" styles={{ background: "ABF1FF94" }}></div>
+        <div className="blur s-blur1" style={{ background: "ABF1FF94" }}></div>
       </div>
 
       {/* right side */}

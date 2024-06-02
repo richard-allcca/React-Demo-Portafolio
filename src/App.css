@@ -9,6 +9,7 @@
   --orangeCard: rgba(252, 166, 31, 0.45);
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
 }
+
 .App {
   padding: 0.5rem 3.5rem;
   overflow: hidden;
@@ -33,15 +34,16 @@
 }
 
 /* Styling the "Link" element to make it look like a button. */
-.spy-button{
+.spy-button {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
 }
+
 /* responsive */
-@media screen and (max-width: 480px){
-  .App{
+@media screen and (max-width: 480px) {
+  .App {
     padding: 0.5rem 1rem;
   }
 }

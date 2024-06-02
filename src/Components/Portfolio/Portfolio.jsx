@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 // library for slider
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,7 +6,7 @@ import { themeContext } from "../../Context";
 // images
 import Ecommerce from "../../img/ecommerce.png";
 import HOC from "../../img/hoc.png";
-import MusicApp from "../../img/musicapp.png";
+import MusicApp from "../../img/musicApp.png";
 import Sidebar from "../../img/sidebar.png";
 // style
 import "./Portfolio.css";
@@ -14,7 +14,8 @@ import "./Portfolio.css";
 const Portfolio = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
-  return (
+  
+return (
     <div className="portfolio" id="Portfolio">
       {/* heading */}
       <span style={{ color: darkMode ? "white" : "" }}>Recent Projects</span>
