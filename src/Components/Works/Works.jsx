@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useContext } from "react";
-import { themeContext } from "../../Context";
+import { themeContext } from "../../context/Context";
 // iconos
 import Amazon from "../../img/amazon.png";
 import Facebook from "../../img/Facebook.png";

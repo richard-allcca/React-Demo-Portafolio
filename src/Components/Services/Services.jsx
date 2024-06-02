@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 // cv pdf
 import Resume from "../../assets/CV-05-2022-RICHARD.pdf";
-import { themeContext } from "../../Context";
+import { themeContext } from "../../context/Context";
 // images cards
 import Glasses from "../../img/glasses.png";
 import HeartEmoji from "../../img/heartemoji.png";

@@ -10,7 +10,7 @@ import Services from "./Components/Services/Services";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Works from "./Components/Works/Works";
 // Context con Reducer
-import { themeContext } from "./Context";
+import { themeContext } from "./context/Context";
 
 function App() {
    const theme = useContext(themeContext);

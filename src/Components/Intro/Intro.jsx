@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 // context
 import { useContext } from "react";
 import { Link } from "react-scroll/modules";
-import { themeContext } from "../../Context";
+import { themeContext } from "../../context/Context";
 // components
 import boy from "../../img/boy.png";
 import Crown from "../../img/crown.png";

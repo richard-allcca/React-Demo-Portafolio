@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
 import App from "./App";
 // Context con Reducer
-import { ThemeProvider } from "./Context";
+import { ThemeProvider } from './context/Reducer';
 // Styles
 import "./index.css";
 

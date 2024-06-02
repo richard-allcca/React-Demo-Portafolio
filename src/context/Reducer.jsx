@@ -1,6 +1,5 @@
-import { createContext, useReducer } from "react";
-
-export const themeContext = createContext();
+import { useReducer } from "react";
+import { themeContext } from './Context';
 
 const initialState = { darkMode: false };
 
@@ -25,6 +24,3 @@ return (
       </themeContext.Provider>
    );
 };
-
-// Notas:
-// 1. Aquí usamos "Context" y "Reducer" para usar el reducer dentro de todo el contexto creado

@@ -2,7 +2,7 @@
 import Moon from "@iconscout/react-unicons/icons/uil-moon";
 import Sun from "@iconscout/react-unicons/icons/uil-sun";
 import { useContext } from "react";
-import { themeContext } from "../../../../Context";
+import { themeContext } from "../../../../context/Context";
 
 import "./Toggle.css";
 

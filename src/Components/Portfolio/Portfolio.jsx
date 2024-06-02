@@ -2,7 +2,7 @@ import { useContext } from "react";
 // library for slider
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { themeContext } from "../../Context";
+import { themeContext } from "../../context/Context";
 // images
 import Ecommerce from "../../img/ecommerce.png";
 import HOC from "../../img/hoc.png";
