@@ -33,7 +33,7 @@ const Navbar = () => {
           spy={ true }
           to="Contacto"
           smooth={ true }
-          className="button-contact "
+          className="n-btn-contact "
         >
           Contact
         </Link>

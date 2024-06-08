@@ -17,6 +17,26 @@ import Vector2 from "../../img/Vector2.png";
 import FloatingDiv from './../FloatingDiv/FloatingDiv';
 // styles
 import "./Intro.css";
+import BlobBlue from "../../assets/icons/blob-blue";
+import BlobYellow from "../../assets/icons/Blob-yellow";
+
+const listSociaNetworks = [
+  {
+    name: "Github",
+    link: "http://github.com/richard-allcca",
+    icon: Github,
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/richard-allcca-llano/",
+    icon: LinkedIn,
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/r.allcca/",
+    icon: Instagram,
+  },
+];
 
 const Intro = () => {
   const transition = { duration: 2, type: "spring" };
@@ -24,11 +44,30 @@ const Intro = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
 
+  const getSharedButtons = () => {
+    return (
+      <div className="i-icons">
+        {
+          listSociaNetworks.map((item, index) => (
+            <a
+              href={ item.link }
+              target="_blank"
+              rel="noopener noreferrer"
+              key={ index }
+            >
+              <img src={ item.icon } alt={ item.name } />
+            </a>
+          ))
+        }
+      </div>
+    );
+  };
+
   return (
     <div className="intro">
-      <div className="i-left">
+      <div className="i-description">
         <div className="i-name">
-          <span style={{ color: darkMode ? "white" : "" }}>Hi! I Am</span>
+          <span style={ { color: darkMode ? "white" : "" } }>Hi! I Am</span>
           <span>Richard A. Llano</span>
           <span>
             Frontend Developer with high level of experience in web designing
@@ -36,54 +75,36 @@ const Intro = () => {
           </span>
         </div>
 
-        {/* reemplazo de boton con Link */}
-        {/* <button className="button i-button">Hire me</button> */}
         <Link
-          spy={true}
+          spy={ true }
           to="Contacto"
-          smooth={true}
-          className="button i-button"
+          smooth={ true }
+          className="i-button"
         >
           Hire me
         </Link>
 
-        <div className="i-icons">
-          <a
-            href="http://github.com/richard-allcca"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={Github} alt="Github" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/richard-allcca-llano/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={LinkedIn} alt="LinkedIn" />
-          </a>
-          <a
-            href="https://www.instagram.com/thouma_dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={Instagram} alt="Instagram" />
-          </a>
-        </div>
+        { getSharedButtons() }
+
       </div>
 
-      <div className="i-right">
-        <img src={Vector1} alt="" />
-        <img src={Vector2} alt="" />
-        <img src={boy} alt="" />
-        {/* imagenes */}
-        <motion.img
-          initial={{ left: "-36%" }}
-          whileInView={{ left: "-24%" }}
-          transition={{ transition }}
-          src={glassesEmoji}
-          alt="Emoji con lentes"
-        />
+      <div className="i-images">
+        <div className="blob-blue">
+          <BlobBlue />
+        </div>
+        <div className="blob-yellow" >
+          <BlobYellow />
+        </div>
+        <div className="i-boy" >
+          <img src={ boy } alt="" />
+        </div>
+        <div className="i-emoji-glass" >
+          <img
+            src={ glassesEmoji }
+            alt="Emoji con lentes"
+          />
+        </div>
+        {/* 
         <motion.div
           className="floating-div"
           initial={{ top: "-4%", left: "84%" }}
@@ -112,8 +133,9 @@ const Intro = () => {
             height: "11rem",
             left: "-9rem",
           }}
-        ></div>
+        ></div> */}
       </div>
+
     </div>
   );
 };

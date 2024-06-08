@@ -21,7 +21,7 @@
 .App {
   min-width: 100%;
   min-height: 100%;
-  box-shadow: 1px 1px 20px rgba(128, 128, 128, 0.226);
+  /* box-shadow: 1px 1px 20px rgba(128, 128, 128, 0.226); */
 }
 
 .button {
