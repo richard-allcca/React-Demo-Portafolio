@@ -1,0 +1,40 @@
+.menu-tablet {
+  display: flex;
+  list-style: none;
+  /* border: 1px solid red; */
+  padding: 0;
+}
+
+.wrapper-menu.active {
+  /* opacity: 1;
+  transform: translate(0, 0);
+  transition: transform 1s ease;
+  visibility: visible; */
+}
+
+.wrapper-menu.desactive {
+  /* opacity: 1;
+  transform: translate(-100%, 0);
+  transition: transform 1s ease;
+  visibility: visible; */
+}
+
+.close-menu {
+  /* align-self: flex-end;
+  margin-right: 12px;
+  margin-top: 12px; */
+}
+
+.menu-mobile {
+  /* background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 93%;
+  justify-content: space-around;
+  left: 0;
+  list-style-type: none;
+  margin-top: 56px;
+  padding: 0;
+  text-align: center;
+  width: 100%; */
+}

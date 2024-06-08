@@ -4,9 +4,10 @@ import "./Navbar.css";
 import useWindowSize from '../../hooks/useWindowSize';
 import Toggle from './children/Toggle/Toggle';
 import MenuMobile from './children/menu-mobile/MenuMobile';
+import MenuTablet from './children/menu-tablet/MenuTablet';
 
 const Navbar = () => {
-  const { isMobile } = useWindowSize();
+  const { isMobile, isTablet } = useWindowSize();
 
   const openMenu = () => {
     if (typeof document !== 'undefined') {
@@ -15,21 +16,18 @@ const Navbar = () => {
     }
   };
 
-
-  return (
-    <div className="n-wrapper desactive" >
-
+  const getLeftContent = () => {
+    return (
       <div className="n-left">
-        {
-          isMobile
-            ? <i onClick={ openMenu } className="uis uis-bars" ></i>
-            : <div className="n-name">Thouma</div>
-        }
+        { isMobile && <i onClick={ openMenu } className="uis uis-bars" ></i>}
+        <div className="n-name">Thouma</div>
         <Toggle />
       </div>
+    );
+  };
 
-      { isMobile && <MenuMobile /> }
-
+  const getBtnContact = () => {
+    return (
       <div className="n-contact" >
         <Link
           spy={ true }
@@ -40,6 +38,19 @@ const Navbar = () => {
           Contact
         </Link>
       </div>
+    );
+  };
+
+  return (
+    <div className="n-wrapper desactive" >
+
+      { getLeftContent() }
+
+      { isMobile && <MenuMobile /> }
+      { isTablet && <MenuTablet /> }
+
+      { getBtnContact() }
+
     </div>
   );
 };

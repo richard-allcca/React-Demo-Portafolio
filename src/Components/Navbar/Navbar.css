@@ -26,8 +26,6 @@
   font-size: 1.3rem;
 }
 
-/* ================= */
-
 .n-right {
   display: flex;
   flex: 1;
@@ -54,55 +52,30 @@
 }
 
 
-/* responsive */
 @media screen and (min-width: 768px) {
   .n-wrapper {
     height: 10vh;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     align-content: center;
+    column-gap: 20px;
   }
 
   .n-left {
+    flex: 0;
+  }
+
+  .menu-tablet {
     flex: 1;
-    align-items: center;
-    display: flex;
-    gap: 2rem;
+    justify-content: space-between;
+    margin-bottom: 0;
   }
 
-  .n-name {
-    font-size: 1.3rem;
-    font-weight: bold;
+  .menu-item {
+    font-size: 20px;
   }
 
-  .n-right {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    font-weight: 400;
-  }
-
-  .n-list {
-    flex: 10;
-  }
-
-  .n-list>ul {
-    display: flex;
-    gap: 2rem;
-    margin-right: 4rem;
-    /* display: none; */
-  }
-
-  li:hover {
-    cursor: pointer;
-    color: var(--orange);
-  }
-
-  /* el original tiene 2 pero lo veo muy estirado y le puse 1 */
-  .n-button,
-  .spy-button {
-    flex: 1;
+  .button-contact {
+    font-size: 20px;
   }
 }
