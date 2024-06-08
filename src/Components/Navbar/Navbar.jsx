@@ -7,7 +7,7 @@ import MenuMobile from './children/menu-mobile/MenuMobile';
 import MenuTablet from './children/menu-tablet/MenuTablet';
 
 const Navbar = () => {
-  const { isMobile, isTablet } = useWindowSize();
+  const { isMobile, isTablet, isDesktop } = useWindowSize();
 
   const openMenu = () => {
     if (typeof document !== 'undefined') {
@@ -47,7 +47,7 @@ const Navbar = () => {
       { getLeftContent() }
 
       { isMobile && <MenuMobile /> }
-      { isTablet && <MenuTablet /> }
+      { isTablet || isDesktop && <MenuTablet /> }
 
       { getBtnContact() }
 
