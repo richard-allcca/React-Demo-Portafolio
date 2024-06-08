@@ -1,21 +1,55 @@
 .toggle {
-  display: flex;
-  justify-content: space-between;
-  border: 3px solid var(--orange);
-  border-radius: 1rem;
-  position: relative;
-  padding: 2px;
+  align-items: center;
+  border-radius: 50px;
+  border: 1px solid var(--orange);
   cursor: pointer;
+  display: flex;
+  height: 22px;
+  justify-content: space-between;
+  padding: 0 2px;
+  position: relative;
+  width: 40px;
+
+  div,
+  svg {
+    height: 12px;
+    width: 12px;
+  }
 }
 
-.toggle > * {
-  width: 1rem;
-  height: 1rem;
+.toggle>* {
   color: var(--orange);
 }
 
-.t-button{
+.t-circle {
   border-radius: 100%;
   background: var(--orange);
   position: absolute;
+  height: 23px;
+  max-width: 23px;
+}
+
+@media screen and (min-width: 768px) {
+  .toggle {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid var(--orange);
+    border-radius: 1rem;
+    position: relative;
+    padding: 2px;
+    cursor: pointer;
+  }
+
+  .toggle>* {
+    width: 1rem;
+    height: 1rem;
+    color: var(--orange);
+  }
+
+  .t-circle {
+    border-radius: 100%;
+    background: var(--orange);
+    position: absolute;
+  }
+
 }

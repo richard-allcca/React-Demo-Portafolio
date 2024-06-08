@@ -25,14 +25,14 @@ function App() {
          }}
       >
          <Navbar />
-         <Intro />
-         <Services />
-         <Experience />
-         <Works />
-         <Portfolio />
-         <Testimonials />
-         <Contact />
-         <Footer />
+         {/* <Intro /> */}
+         {/* <Services /> */}
+         {/* <Experience /> */}
+         {/* <Works /> */}
+         {/* <Portfolio /> */}
+         {/* <Testimonials /> */}
+         {/* <Contact /> */}
+         {/* <Footer /> */}
       </div>
    );
 }

@@ -1,48 +1,45 @@
 import { Link } from 'react-scroll';
 import "./Navbar.css";
 
+import useWindowSize from '../../hooks/useWindowSize';
 import Toggle from './children/Toggle/Toggle';
+import MenuMobile from './children/menu-mobile/MenuMobile';
+
 const Navbar = () => {
+  const { isMobile } = useWindowSize();
+
+  const openMenu = () => {
+    if (typeof document !== 'undefined') {
+      document.querySelector('.wrapper-menu').classList.add('active');
+      document.querySelector('.wrapper-menu').classList.remove('desactive');
+    }
+  };
+
+
   return (
-    <div className="n-wrapper">
+    <div className="n-wrapper desactive" >
+
       <div className="n-left">
-        <div className="n-name">Thouma</div>
+        {
+          isMobile
+            ? <i onClick={ openMenu } className="uis uis-bars" ></i>
+            : <div className="n-name">Thouma</div>
+        }
         <Toggle />
       </div>
-      <div className="n-right">
-        <div className="n-list">
-          <ul style={{ listStyleType: "none" }}>
-            <Link
-              spy={true}
-              to="Navbar"
-              smooth={true}
-              activeClass="activeClass"
-            >
-              <li>Home</li>
-            </Link>
-            <Link spy={true} to="Services" smooth={true}>
-              <li>Services</li>
-            </Link>
-            <Link spy={true} to="Experience" smooth={true}>
-              <li>Experience</li>
-            </Link>
-            <Link spy={true} to="Portfolio" smooth={true}>
-              <li>Portfolio</li>
-            </Link>
-            <Link spy={true} to="Testimonial" smooth={true}>
-              <li>Testimonials</li>
-            </Link>
-          </ul>
-        </div>
+
+      { isMobile && <MenuMobile /> }
+
+      <div className="n-contact" >
+        <Link
+          spy={ true }
+          to="Contacto"
+          smooth={ true }
+          className="button-contact "
+        >
+          Contact
+        </Link>
       </div>
-      <Link
-        spy={true}
-        to="Contacto"
-        smooth={true}
-        className="button n-button spy-button"
-      >
-        Contact
-      </Link>
     </div>
   );
 };

@@ -1,20 +1,32 @@
 .n-wrapper {
-  height: 10vh;
+  height: 56px;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 16px;
+  align-items: center;
+}
+
+.n-name {
+  font-size: 20.8px;
+  font-weight: bold;
 }
 
 .n-left {
   flex: 1;
   align-items: center;
   display: flex;
-  gap: 2rem;
+  gap: 16px;
 }
 
-.n-name {
+.spy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.3rem;
-  font-weight: bold;
 }
+
+/* ================= */
 
 .n-right {
   display: flex;
@@ -24,28 +36,73 @@
   font-weight: 400;
 }
 
-.n-list {
-  flex: 10;
+.n-contact {
+  border-radius: 34px;
+  color: white;
+  font-size: 16px;
+  box-shadow: 0px 10px 24px 3px rgba(251, 161, 40, 0.42);
 }
 
-.n-list > ul {
-  display: flex;
-  gap: 2rem;
-  margin-right: 4rem;
+.button-contact {
+  border-radius: 34px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 15px;
+  background: linear-gradient(180deg, #fdc50f 26.71%, #fb98f2 99.36%);
+  box-shadow: 0px 0px 24px 3px rgba(251, 161, 40, 0.42);
 }
 
-li:hover {
-  cursor: pointer;
-  color: var(--orange);
-}
-/* el original tiene 2 pero lo veo muy estirado y le puse 1 */
-.n-button,.spy-button {
-  flex: 1;
-}
 
 /* responsive */
-@media screen and (max-width: 480px){
-  .n-list{
-    display: none;
+@media screen and (min-width: 768px) {
+  .n-wrapper {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  .n-left {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .n-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .n-right {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+  }
+
+  .n-list {
+    flex: 10;
+  }
+
+  .n-list>ul {
+    display: flex;
+    gap: 2rem;
+    margin-right: 4rem;
+    /* display: none; */
+  }
+
+  li:hover {
+    cursor: pointer;
+    color: var(--orange);
+  }
+
+  /* el original tiene 2 pero lo veo muy estirado y le puse 1 */
+  .n-button,
+  .spy-button {
+    flex: 1;
   }
 }
