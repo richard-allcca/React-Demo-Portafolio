@@ -12,13 +12,11 @@ import glassesEmoji from "../../img/glassesEmoji.png";
 import Instagram from "../../img/instagram.png";
 import LinkedIn from "../../img/linkedIn.png";
 import thumbUp from "../../img/thumbUp.png";
-import Vector1 from "../../img/Vector1.png";
-import Vector2 from "../../img/Vector2.png";
-import FloatingDiv from './../FloatingDiv/FloatingDiv';
 // styles
-import "./Intro.css";
 import BlobBlue from "../../assets/icons/blob-blue";
 import BlobYellow from "../../assets/icons/Blob-yellow";
+import FloatingDiv from "./children/FloatingDiv/FloatingDiv";
+import "./Intro.css";
 
 const listSociaNetworks = [
   {
@@ -44,9 +42,9 @@ const Intro = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
 
-  const getSharedButtons = () => {
+  const getSocialButtons = () => {
     return (
-      <div className="i-icons">
+      <>
         {
           listSociaNetworks.map((item, index) => (
             <a
@@ -59,12 +57,13 @@ const Intro = () => {
             </a>
           ))
         }
-      </div>
+      </>
     );
   };
 
   return (
     <div className="intro">
+
       <div className="i-description">
         <div className="i-name">
           <span style={ { color: darkMode ? "white" : "" } }>Hi! I Am</span>
@@ -84,8 +83,9 @@ const Intro = () => {
           Hire me
         </Link>
 
-        { getSharedButtons() }
-
+        <div className="i-social-icons">
+          { getSocialButtons() }
+        </div>
       </div>
 
       <div className="i-images">
@@ -99,41 +99,28 @@ const Intro = () => {
           <img src={ boy } alt="" />
         </div>
         <div className="i-emoji-glass" >
-          <img
-            src={ glassesEmoji }
-            alt="Emoji con lentes"
-          />
+          <img src={ glassesEmoji } alt="Emoji con lentes" />
         </div>
-        {/* 
+        {/*  */}
         <motion.div
           className="floating-div"
-          initial={{ top: "-4%", left: "84%" }}
-          whileInView={{ left: "68%" }}
+          initial={{ top: "0%", left: "0%" }}
+          whileInView={{ left: "59%" }}
           transition={transition}
-          style={{ top: "-4rem", left: "68%" }}
-        >
+          style={{ top: "-4rem", left: "59%" }}
+          >
           <FloatingDiv image={Crown} txt1="Web" txt2="Developer" />
         </motion.div>
         <motion.div
           className="floating-div"
-          initial={{ left: "9rem", top: "18rem" }}
-          whileInView={{ left: "0rem" }}
+          initial={{ bottom: "4%", right: "0%" }}
+          whileInView={{ right: "59%" }}
           transition={transition}
-          style={{ top: "18rem", left: "0rem" }}
-        >
+          style={{ bottom: "4%", right: "59%" }}
+          >
           <FloatingDiv image={thumbUp} txt1="Best Design" txt2="Award" />
         </motion.div>
-        <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
-        <div
-          className="blur"
-          style={{
-            background: "#c1f5ff",
-            top: "17rem",
-            width: "21rem",
-            height: "11rem",
-            left: "-9rem",
-          }}
-        ></div> */}
+
       </div>
 
     </div>

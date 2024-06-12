@@ -1,6 +1,8 @@
 import { Link } from 'react-scroll';
 import './MenuMobile.css';
 import { UilTimesCircle } from '@iconscout/react-unicons';
+import { themeContext } from '../../../../context/Context';
+import { useContext } from 'react';
 
 const menuItems = [
   {
@@ -27,6 +29,9 @@ const menuItems = [
 
 const MenuMobile = () => {
 
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
   const closeMenu = () => {
     if (typeof document !== 'undefined') {
       document.querySelector('.wrapper-menu').classList.remove('active');
@@ -36,9 +41,10 @@ const MenuMobile = () => {
 
   const getMenuList = () => {
     return (
-      <div className='wrapper-menu' >
-        <UilTimesCircle onClick={ closeMenu } className="close-menu" />
-        <ul className="menu-mobile">
+      <div className='wrapper-menu' style={ { backgroundColor: darkMode ? "black" : "" }} >
+        <UilTimesCircle 
+          onClick={ closeMenu } className="close-menu" style={ { backgroundColor: darkMode ? "black" : "" }} />
+        <ul className="menu-mobile" style={ { backgroundColor: darkMode ? "black" : "" }} >
           {
             menuItems.map((item, index) => (
               <Link
@@ -48,7 +54,12 @@ const MenuMobile = () => {
                 key={ index }
                 activeClass='activeClass'
               >
-                <li onClick={ closeMenu } >{ item.title }</li>
+                <li 
+                  style={ { color: darkMode ? "white" : "" }}
+                  onClick={ closeMenu } 
+                  >
+                    { item.title }
+                  </li>
               </Link>
             ))
           }
