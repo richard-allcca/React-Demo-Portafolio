@@ -47,7 +47,7 @@ const Navbar = () => {
       { getLeftContent() }
 
       { isMobile && <MenuMobile /> }
-      { isTablet || isDesktop && <MenuTablet /> }
+      { (isTablet || isDesktop) && <MenuTablet /> }
 
       { getBtnContact() }
 

@@ -1,6 +1,3 @@
-// animation
-import { motion } from "framer-motion";
-// context
 import { useContext } from "react";
 import { Link } from "react-scroll/modules";
 import { themeContext } from "../../context/Context";
@@ -13,10 +10,9 @@ import Instagram from "../../img/instagram.png";
 import LinkedIn from "../../img/linkedIn.png";
 import thumbUp from "../../img/thumbUp.png";
 // styles
-import BlobBlue from "../../assets/icons/blob-blue";
-import BlobYellow from "../../assets/icons/Blob-yellow";
 import FloatingDiv from "./children/FloatingDiv/FloatingDiv";
 import "./Intro.css";
+import background from '../../assets/images/background.png';
 
 const listSociaNetworks = [
   {
@@ -37,7 +33,6 @@ const listSociaNetworks = [
 ];
 
 const Intro = () => {
-  const transition = { duration: 2, type: "spring" };
 
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -89,11 +84,8 @@ const Intro = () => {
       </div>
 
       <div className="i-images">
-        <div className="blob-blue">
-          <BlobBlue />
-        </div>
-        <div className="blob-yellow" >
-          <BlobYellow />
+        <div className="background">
+          <img src={background} alt="background" />
         </div>
         <div className="i-boy" >
           <img src={ boy } alt="" />
@@ -102,24 +94,12 @@ const Intro = () => {
           <img src={ glassesEmoji } alt="Emoji con lentes" />
         </div>
         {/*  */}
-        <motion.div
-          className="floating-div"
-          initial={{ top: "0%", left: "0%" }}
-          whileInView={{ left: "59%" }}
-          transition={transition}
-          style={{ top: "-4rem", left: "59%" }}
-          >
+        <div className="floating-div-1" >
           <FloatingDiv image={Crown} txt1="Web" txt2="Developer" />
-        </motion.div>
-        <motion.div
-          className="floating-div"
-          initial={{ bottom: "4%", right: "0%" }}
-          whileInView={{ right: "59%" }}
-          transition={transition}
-          style={{ bottom: "4%", right: "59%" }}
-          >
+        </div>
+        <div className="floating-div-2" >
           <FloatingDiv image={thumbUp} txt1="Best Design" txt2="Award" />
-        </motion.div>
+        </div>
 
       </div>
 
