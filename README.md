@@ -45,6 +45,10 @@
 
 Instala gh-pages.
 
+```bash
+  npm install --save-dev gh-pages
+```
+
 Configura package.json para usar la carpeta dist.
 
 ```json
@@ -60,3 +64,21 @@ Configura package.json para usar la carpeta dist.
 Ejecuta npm run build para crear la carpeta dist.
 
 Ejecuta npm run deploy para desplegar en GitHub Pages.
+
+## Posibles Soluciones en caso de fallo al ver la pagina desplegada
+
+> Configuración de vite.config.js:
+
+Asegurarte de que el archivo vite.config.js esté correctamente configurado para apuntar a la base correcta.
+
+> Eliminación y Recreación de la Rama gh-pages:
+
+Eliminar la rama gh-pages existente y volver a crearla para asegurar una nueva implementación limpia.
+
+> Verificación de la Carpeta dist:
+
+Asegurarte de que el archivo index.html y todos los recursos estén correctamente organizados en la carpeta dist.
+
+> Cache del Navegador:
+
+Limpiar el caché del navegador o utilizar la ventana de incógnito para evitar que el caché anterior interfiera con la visualización del sitio actualizado.

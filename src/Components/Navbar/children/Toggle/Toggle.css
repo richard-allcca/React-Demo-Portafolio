@@ -10,7 +10,11 @@
   position: relative;
   width: 40px;
 
-  div,
+  div {
+    height: 12px;
+    width: 12px;
+  }
+
   svg {
     height: 12px;
     width: 12px;
