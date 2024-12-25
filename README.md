@@ -82,3 +82,7 @@ Asegurarte de que el archivo index.html y todos los recursos estén correctament
 > Cache del Navegador:
 
 Limpiar el caché del navegador o utilizar la ventana de incógnito para evitar que el caché anterior interfiera con la visualización del sitio actualizado.
+
+## LINK pagina publicada
+
+[Portafolio](https://richard-allcca.github.io/React-Demo-Portafolio/)
