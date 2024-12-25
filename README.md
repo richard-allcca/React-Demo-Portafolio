@@ -40,3 +40,23 @@
 - [Icons](https://iconscout.com/unicons)
 
 - [tutorial despliegue](https://www.youtube.com/watch?v=82XNPIiHvOQ)
+
+## Despliegue en Github pages
+
+Instala gh-pages.
+
+Configura package.json para usar la carpeta dist.
+
+```json
+  {
+    "homepage": "https://tu-usuario.github.io/mi-proyecto-react",
+    "scripts": {
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d dist"
+      }
+  }
+```
+
+Ejecuta npm run build para crear la carpeta dist.
+
+Ejecuta npm run deploy para desplegar en GitHub Pages.
